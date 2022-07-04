@@ -1,8 +1,8 @@
 <template>
     <div>
         <div class="bg-videoplayer py-5">
-            <div class="container">
-                <div class="row pt-4 justify-content-center align-items-center text-center">
+            <div class="container h-100">
+                <div class="row pt-4 justify-content-center align-items-center text-center h-100">
                     <div class="col">
                         <p class="video-quote">
                             "I just listened to it and said to myself, "Man, I really love this <br>
@@ -28,12 +28,16 @@
     background-image: url("../../public/img/home-testimonial-parallax.jpg");
     background-size: cover;
     background-position: center;
+    height: 100vh;
+    p {
+        font-size: 1.5rem;
+    }
 }
 .video-quote {
     font-weight: 700;
     font-style: italic;
-    font-size: 22px;
     line-height: 44px;
+    
 }
 
 .player-btn {

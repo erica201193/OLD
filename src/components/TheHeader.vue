@@ -3,7 +3,7 @@
     <div class="">
         <div class="bg-jumbotron">
             <div class="container-fluid px-5 text-center">
-                <nav class="d-flex justify-content-between align-items-center pt-3">
+                <nav class="d-flex justify-content-between align-items-center pt-3 my-navbar">
                     <img src="/img/avada-music-logo-retina.png" alt="" class="navbar-logo">
                     <button @click="openMenu" class="navbar-toggle btn"><i class="fa-solid fa-bars fa-2x"></i></button>
                 </nav>
@@ -89,7 +89,11 @@ export default {
 
 <style lang="scss">
 
-
+.my-navbar {
+position: sticky;
+top: 0;
+z-index: 999;
+}
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.5s ease;

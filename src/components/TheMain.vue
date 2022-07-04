@@ -34,8 +34,8 @@
                         <!-- Sezione News SINISTRA -->
                         <div class="col-8 row">
 
-                            <div class="col-12" v-on:mouseover="hover = true" v-on:mouseleave="hover = false">
-                                <div class="news-card horizontal-card" v-if="!hover">
+                            <div class="col-12 p-0 " v-on:mouseover="hover = true" v-on:mouseleave="hover = false">
+                                <div class="news-card horizontal-card mb-4 me-3" v-if="!hover">
                                     <img src="/img/blog_music_techo.jpg" alt="">
                                     <div class="card-text">
                                         <h5>{{ blogPosts.title }}</h5>
@@ -51,8 +51,8 @@
                                 </div>
                             </div>
 
-                            <div class="col-6">
-                                <div class="news-card vertical-card ">
+                            <div class="col-6 p-0">
+                                <div class="news-card vertical-card me-4">
                                     <img src="../../public/img/blog-post3.jpg" alt="">
                                     <div class="card-text ">
                                         <h5>While my guitar gently weeps</h5>
@@ -62,8 +62,8 @@
                                 </div>
                             </div>
 
-                            <div class="col-6">
-                                <div class="news-card vertical-card ">
+                            <div class="col-6 p-0">
+                                <div class="news-card vertical-card me-4">
                                     <img src="../../public/img/blog-post4.jpg" alt="">
                                     <div class="card-text">
                                         <h5>It just sounds better</h5>
@@ -73,8 +73,8 @@
                                 </div>
                             </div>
 
-                            <div class="col-12">
-                                <div class="news-card horizontal-card">
+                            <div class="col-12 p-0">
+                                <div class="news-card horizontal-card mt-4 me-3">
                                     <img src="../../public/img/blog_flavor_rock.jpg" alt="">
                                     <div class="card-text">
                                         <h5>The flavor of rock</h5>
@@ -87,8 +87,8 @@
 
                         <!-- Sezione News DESTRA -->
                         <div class="col-4 row flex-column">
-                            <div class="col d-flex grow-1">
-                                <div class="news-card vertical-card ">
+                            <div class="col d-flex grow-1 p-0">
+                                <div class="news-card vertical-card mb-3 ms-2">
                                     <img src="../../public/img/blog-post1.jpg" alt="">
                                     <div class="card-text ">
                                         <h5>Taking it back to the old school</h5>
@@ -98,8 +98,8 @@
                                 </div>
                             </div>
 
-                            <div class="col d-flex grow-1">
-                                <div class="news-card vertical-card ">
+                            <div class="col d-flex grow-1 p-0">
+                                <div class="news-card vertical-card mt-2 ms-2">
                                     <img src="../../public/img/blog-post2.jpg" alt="">
                                     <div class="card-text ">
                                         <h5>Sharing the stage with a legend</h5>
@@ -182,8 +182,12 @@ export default {
         font-size: 60px;
         font-weight: 700;
     }
+    h5 {
+        font-size: 1.1rem;
+    }
     p {
         font-family: 'Merriweather', serif;
+        font-size: .95rem;
     }
 }
 
@@ -266,10 +270,8 @@ export default {
 }
 
 .horizontal-card {
-    height: 320px;
-}
-.vertical-card {
-    height: 680px;
+    height: 300px;
+
 }
 .hover-filter {
     width: 100%;
