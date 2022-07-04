@@ -1,20 +1,13 @@
 <template>
     <div>
-        <div class="">
-            <div class="row px-5 pb-4">
-                <div class="col-12 pb-4 pt-2 d-flex align-items-center">
-                    <button class="custom-btn btn-pink lessinfo-btn">-</button>
-                    <span class="ms-4">{{ info.date }} {{ info.event }} - {{ info.location }}</span>
-                </div>
-                <div class="col-4 event-map">
-                    <img :src="info.mapImg" alt="">
-                </div>
-                <div class="col event-description">
-                    <span>{{ info.artist }}</span>
-                    <p>{{ info.description }}</p>
-                    <button class="custom-btn btn-pink book-btn">book now</button>
-                </div>
-                
+        <div class="row px-5 py-5">
+            <div class="col-4 event-map">
+                <img :src="info.mapImg" alt="">
+            </div>
+            <div class="col event-description">
+                <span>{{ info.artist }}</span>
+                <p>{{ info.description }}</p>
+                <button class="custom-btn btn-pink book-btn">book now</button>
             </div>
         </div>
     </div>
@@ -51,6 +44,7 @@ export default {
         max-width: 100%;
         height: 100%;
         object-fit: cover;
+        box-shadow: 0rem 0.5rem 2rem rgba(black, .9);
     }
 }
 

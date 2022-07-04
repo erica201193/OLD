@@ -36,7 +36,7 @@
 
                             <div class="col-12" v-on:mouseover="hover = true" v-on:mouseleave="hover = false">
                                 <div class="news-card horizontal-card" v-if="!hover">
-                                    <img src="../../public/img/blog_music_techo.jpg" alt="">
+                                    <img src="/img/blog_music_techo.jpg" alt="">
                                     <div class="card-text">
                                         <h5>{{ blogPosts.title }}</h5>
                                         <p>Sed sit amet sem turpis. Curabitur cursus lacinia est at interdum risus
