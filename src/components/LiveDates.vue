@@ -7,19 +7,19 @@
                 <p class="py-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum finibus cursus
                     egestas. Cras quis vehicula <br> quam, a tempus velit. Ut feugiat augue in sodales luctus</p>
             </div>
-            <div class="event-info ps-3 event-info-list"
-            v-for="(event, i) in liveDates" :key="i" @click="showInfo(i)" >
+            <div class="event-info ps-3 event-info-list" v-for="(event, i) in liveDates" :key="i"
+                @click="showInfo">
                 <button class="custom-btn moreinfo-btn">+</button>
                 <h5 class="ms-3">
                     {{ event.date }}
                     {{ event.event }}
                     {{ event.location }}
                 </h5>
-            </div>
-
-
-            <div class="event-info" v-for="event in liveDates" :key="event.event">
-                <LiveDatesCard :info="event"></LiveDatesCard>
+                <!-- <div v-if="showInfo">
+                    <div class="event-info" v-for="event in liveDates" :key="event.event">
+                        <LiveDatesCard :info="event"></LiveDatesCard>
+                    </div>
+                </div> -->
             </div>
         </div>
 
@@ -30,9 +30,9 @@
 </template>
 
 <script>
-import LiveDatesCard from './LiveDatesCard.vue';
+// import LiveDatesCard from './LiveDatesCard.vue';
 export default {
-    components: { LiveDatesCard },
+    // // components: { LiveDatesCard },
     data() {
         return {
             liveDates: [
@@ -77,12 +77,16 @@ export default {
                     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                 },
 
-            ]
+            ],
+            selectedEvent: [],
         };
     },
     methods: {
-        showInfo(eventIndex) {
-        console.log(`click avvenuto su elemento ${eventIndex}`);
+        showInfo(index) {
+            let selectedEvent = [];
+
+            selectedEvent.push(this.liveDates[index])
+            console.log(selectedEvent);
 
         }
     }

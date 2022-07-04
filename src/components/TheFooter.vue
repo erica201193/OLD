@@ -18,7 +18,7 @@
         <div class="bg-footer">
             <div class="container">
                 <div class="row py-4">
-                    <div class="col text-start copyright-info">
+                    <div class="col-7 text-start copyright-info">
                         <p>© Copyright 2012 - 2022 | Avada Theme by ThemeFusion | All Rights Reserved | Powered by WordPress</p>
                     </div>
                     <div class="col social-links">

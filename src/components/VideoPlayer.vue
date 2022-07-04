@@ -37,6 +37,7 @@
 }
 
 .player-btn {
+    cursor: pointer;
     width: 100px;
     aspect-ratio: 1/1;
     border-radius: 50%;

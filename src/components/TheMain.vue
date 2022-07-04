@@ -1,6 +1,7 @@
 <template>
     <div>
         <main>
+            <!-- Section: MUSIC IS LIFE-->
             <div class="bg-grey">
                 <div class="container">
                     <div class="custom-pink-hr"></div>
@@ -13,6 +14,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Section: BAND NEWS ?FAI ALTRO COMPONENTE-->
 
             <div class="bg-darkgrey py-5">
                 <div class="container">
@@ -23,19 +25,29 @@
                             cursus egestas. Cras quis vehicula <br> quam, a tempus velit. Ut feugiat augue in sodales
                             luctus</p>
                     </div>
+
                     <div class="row justify-content-center">
                         <!-- <div class="col" v-for="article in blogPosts" :key="article.id">
                             <BlogCard :blog-card="article"></BlogCard>
                         </div> -->
+
+                        <!-- Sezione News SINISTRA -->
                         <div class="col-8 row">
-                            <div class="col-12">
-                                <div class="news-card horizontal-card">
+
+                            <div class="col-12" v-on:mouseover="hover = true" v-on:mouseleave="hover = false">
+                                <div class="news-card horizontal-card" v-if="!hover">
                                     <img src="../../public/img/blog_music_techo.jpg" alt="">
                                     <div class="card-text">
-                                        <h5>Technology and music</h5>
-                                        <p>Sed sit amet sem turpis. Curabitur cursus lacinia est at interdum risus id
+                                        <h5>{{ blogPosts.title }}</h5>
+                                        <p>Sed sit amet sem turpis. Curabitur cursus lacinia est at interdum risus
+                                            id
                                             condimentum.</p>
                                     </div>
+                                </div>
+                                <div class="news-card horizontal-card position-relative" v-else>
+                                    <img src="../../public/img/blog_music_techo.jpg" alt="" :class="{ active: hover }">
+                                    <div class="hover-filter"></div>
+                                    <h5 class="hover-text">Technology and music</h5>
                                 </div>
                             </div>
 
@@ -73,6 +85,7 @@
                             </div>
                         </div>
 
+                        <!-- Sezione News DESTRA -->
                         <div class="col-4 row flex-column">
                             <div class="col d-flex grow-1">
                                 <div class="news-card vertical-card ">
@@ -154,7 +167,8 @@ export default {
                     title: "The flavor of rock",
                     subtitle: "Sed sit amet sem turpis. Curabitur cursus lacinia est at interdum risus id condimentum.",
                 }
-            ]
+            ],
+            hover: false,
         };
     },
 }
@@ -256,5 +270,24 @@ export default {
 }
 .vertical-card {
     height: 680px;
+}
+.hover-filter {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #ea4a56;
+    opacity: 0.7;
+}
+
+.hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-weight: 700;
 }
 </style>
