@@ -88,12 +88,11 @@ export default {
 
 
 <style lang="scss">
-
-.my-navbar {
-position: sticky;
-top: 0;
-z-index: 999;
-}
+/* .my-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+} */
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.5s ease;
