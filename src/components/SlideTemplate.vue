@@ -1,7 +1,7 @@
 <template>
     <div class="slide-template text-center">
         <img :src="img" alt="" class="mb-5">
-        <h5 class="mt-5" v-show="select">{{ eventName }}</h5>
+        <h5 class="mt-5">{{ eventName }}</h5>
     </div>
 </template>
 
@@ -27,10 +27,13 @@ export default {
         transition: 0.5s ease-in-out;
 
         &:hover {
-            transform: scale(1.3);
-            object-position: center;
+            transform: scale(1.2);
+            object-position: bottom;
             position: relative;
             top:50px;
+            h5 {
+                opacity: 100%;
+            }
         }
 
     }
@@ -38,6 +41,7 @@ export default {
         color: rgba(255, 255, 255, 0.243);
         font-size: .9rem;
         padding: 1.5rem 0rem;
+        transition: 0.5s ease-in-out;
     }
 }
 </style>

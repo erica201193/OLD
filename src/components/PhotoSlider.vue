@@ -1,17 +1,21 @@
 <template>
-    <div class="bg-darkgrey py-5">
-        <div class="container position-relative">
-
-            <div class="left-scroll slider-btn" @click="scroll('prev')">
-                <i class="fa-solid fa-circle-chevron-left fa-lg"></i>
-            </div>
-            <div class="right-scroll slider-btn" @click="scroll('next')">
-                <i class="fa-solid fa-circle-chevron-right fa-lg"></i>
-            </div>
+    <div class="bg-darkgrey">
+        <div class="container position-relative py-5">
 
             <div class="row align-items-center row-cols-3 photo-slider" id="slider">
-                <div class="col" v-for="(slide, i) in eventPhotos" :key="i + 1" @mouseenter="selectImg(slide)" @mouseleave="selectImg(slide)">
-                    <SlideTemplate :img="slide.photo" :eventName="slide.eventName" :select="slide.select"></SlideTemplate>
+                <div class="col" v-for="(slide, i) in eventPhotos" :key="i + 1"
+                    @mouseenter="selectImg(slide)"
+                    @mouseleave="selectImg(slide)">
+                    <SlideTemplate :img="slide.photo" :eventName="slide.eventName" :select="slide.select">
+                    </SlideTemplate>
+                </div>
+            </div>
+            <div class="row pt-3">
+                <div class="col left-scroll slider-btn" @click="scroll('prev')">
+                    <i class="fa-solid fa-circle-chevron-left fa-lg"></i>
+                </div>
+                <div class="col right-scroll slider-btn" @click="scroll('next')">
+                    <i class="fa-solid fa-circle-chevron-right fa-lg"></i>
                 </div>
             </div>
 
@@ -105,7 +109,6 @@ export default {
 <style lang="scss" scoped>
 
 .photo-slider {
-    height: 450px;
     overflow: auto;
     flex-wrap: nowrap;
 }
@@ -120,18 +123,8 @@ export default {
         color: white;
     }
 }
-
-.right-scroll {
-    position: absolute;
-    text-align: end;
-    right: -50px;
-    top: 50%;
-}
-
 .left-scroll {
-    position: absolute;
-    top: 50%;
-    left: -50px;
+text-align: end;
 }
 </style>
 

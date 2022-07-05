@@ -14,7 +14,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Section: BAND NEWS ?FAI ALTRO COMPONENTE-->
+            <!-- Section: BAND NEWS -->
 
             <div class="bg-darkgrey py-5">
                 <div class="container">
@@ -34,78 +34,79 @@
                         <!-- Sezione News SINISTRA -->
                         <div class="col-8 row">
 
-                            <div class="col-12 p-0 " v-on:mouseover="hover = true" v-on:mouseleave="hover = false">
-                                <div class="news-card horizontal-card mb-4 me-3" v-if="!hover">
-                                    <img src="/img/blog_music_techo.jpg" alt="">
+                            <div class="col-12 pb-4">
+                                <div class="news-card horizontal-card">
+                                    <img :src="blogPosts[0].image" alt="">
                                     <div class="card-text">
-                                        <h5>{{ blogPosts.title }}</h5>
-                                        <p>Sed sit amet sem turpis. Curabitur cursus lacinia est at interdum risus
-                                            id
-                                            condimentum.</p>
+                                        <h5>{{ blogPosts[0].title }}</h5>
+                                        <p>{{ blogPosts[0].subtitle }}</p>
                                     </div>
-                                </div>
-                                <div class="news-card horizontal-card position-relative" v-else>
-                                    <img src="../../public/img/blog_music_techo.jpg" alt="" :class="{ active: hover }">
-                                    <div class="hover-filter"></div>
-                                    <h5 class="hover-text">Technology and music</h5>
+                                    <h5 class="hover-text">{{ blogPosts[0].title }}</h5>
+                                    <div class="hover-red-filter"></div>
                                 </div>
                             </div>
 
-                            <div class="col-6 p-0">
-                                <div class="news-card vertical-card me-4">
-                                    <img src="../../public/img/blog-post3.jpg" alt="">
+                            <div class="col-6">
+                                <div class="news-card vertical-card">
+                                    <img :src="blogPosts[2].image" alt="">
                                     <div class="card-text ">
-                                        <h5>While my guitar gently weeps</h5>
-                                        <p>Sed sit amet sem turpis. Curabitur cursus lacinia est at interdum risus id
-                                            condimentum.</p>
+                                        <h5>{{ blogPosts[2].title }}</h5>
+                                        <p>{{ blogPosts[2].subtitle }}</p>
                                     </div>
+                                    <h5 class="hover-text">{{ blogPosts[2].title }}</h5>
+                                    <div class="hover-red-filter"></div>
                                 </div>
                             </div>
 
-                            <div class="col-6 p-0">
-                                <div class="news-card vertical-card me-4">
-                                    <img src="../../public/img/blog-post4.jpg" alt="">
-                                    <div class="card-text">
-                                        <h5>It just sounds better</h5>
-                                        <p>Sed sit amet sem turpis. Curabitur cursus lacinia est at interdum risus id
-                                            condimentum.</p>
+                            <div class="col-6">
+                                <div class="news-card vertical-card">
+                                    <img :src="blogPosts[3].image" alt="">
+                                    <div class="card-text ">
+                                        <h5>{{ blogPosts[3].title }}</h5>
+                                        <p>{{ blogPosts[3].subtitle }}</p>
                                     </div>
+                                    <h5 class="hover-text">{{ blogPosts[3].title }}</h5>
+                                    <div class="hover-red-filter"></div>
                                 </div>
                             </div>
 
-                            <div class="col-12 p-0">
-                                <div class="news-card horizontal-card mt-4 me-3">
-                                    <img src="../../public/img/blog_flavor_rock.jpg" alt="">
-                                    <div class="card-text">
-                                        <h5>The flavor of rock</h5>
-                                        <p>Sed sit amet sem turpis. Curabitur cursus lacinia est at interdum risus id
-                                            condimentum.</p>
+                            <div class="col-12 pt-4">
+                                <div class="news-card horizontal-card">
+                                    <img :src="blogPosts[5].image" alt="">
+                                    <div class="card-text ">
+                                        <h5>{{ blogPosts[5].title }}</h5>
+                                        <p>{{ blogPosts[5].subtitle }}</p>
                                     </div>
+                                    <h5 class="hover-text">{{ blogPosts[5].title }}</h5>
+                                    <div class="hover-red-filter"></div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Sezione News DESTRA -->
                         <div class="col-4 row flex-column">
-                            <div class="col d-flex grow-1 p-0">
-                                <div class="news-card vertical-card mb-3 ms-2">
-                                    <img src="../../public/img/blog-post1.jpg" alt="">
+
+                            <div class="col d-flex grow-1 pb-2">
+                                <div class="news-card vertical-card">
+                                    <img :src="blogPosts[1].image" alt="">
                                     <div class="card-text ">
-                                        <h5>Taking it back to the old school</h5>
-                                        <p>Sed sit amet sem turpis. Curabitur cursus lacinia est at interdum risus id
-                                            condimentum.</p>
+                                        <h5>{{ blogPosts[1].title }}</h5>
+                                        <p>{{ blogPosts[1].subtitle }}</p>
                                     </div>
+                                    <h5 class="hover-text">{{ blogPosts[1].title }}</h5>
+                                    <div class="hover-red-filter"></div>
                                 </div>
                             </div>
 
-                            <div class="col d-flex grow-1 p-0">
-                                <div class="news-card vertical-card mt-2 ms-2">
-                                    <img src="../../public/img/blog-post2.jpg" alt="">
+                            <div class="col d-flex grow-1 pt-3">
+                                <div class="news-card vertical-card">
+                                    <img :src="blogPosts[4].image" alt="">
                                     <div class="card-text ">
-                                        <h5>Sharing the stage with a legend</h5>
-                                        <p>Sed sit amet sem turpis. Curabitur cursus lacinia est at interdum risus id
-                                            condimentum.</p>
+                                        <h5>{{ blogPosts[4].title }}</h5>
+                                        <p>{{ blogPosts[4].subtitle }}</p>
                                     </div>
+                                    <h5 class="hover-text">{{ blogPosts[4].title }}</h5>
+                                    <div class="hover-red-filter"></div>
                                 </div>
                             </div>
                         </div>
@@ -124,10 +125,8 @@
 </template>
 
 <script>
-// import BlogCard from "./BlogCard.vue";
 
 export default {
-    // components: { BlogCard },
     data() {
         return {
             blogPosts: [
@@ -171,6 +170,8 @@ export default {
             hover: false,
         };
     },
+    methods: {
+    }
 }
 
 </script>
@@ -190,7 +191,6 @@ export default {
         font-size: .95rem;
     }
 }
-
 
 .bg-grey {
     background-color: #323844;
@@ -236,10 +236,27 @@ export default {
     
 }
 
-.news-card {
+// CARDS
 
-    border: 1px solid #323844;
+.horizontal-card {
+    height: 300px;
+}
+.news-card {
     position: relative;
+    border: 1px solid #323844;
+
+    &:hover {
+        cursor: pointer;
+        .card-text {
+            opacity: 0%;
+        }
+        .hover-text {
+            opacity: 100%;
+        }
+        .hover-red-filter {
+            opacity: 0.7;
+        }
+    }
     
     img {
         width: 100%;
@@ -268,18 +285,14 @@ export default {
     }
 
 }
-
-.horizontal-card {
-    height: 300px;
-
-}
-.hover-filter {
+.hover-red-filter {
     width: 100%;
     height: 100%;
+    background-color: #ea4a56;
     position: absolute;
     top: 0;
-    background-color: #ea4a56;
-    opacity: 0.7;
+    opacity: 0;
+
 }
 
 .hover-text {
@@ -291,5 +304,7 @@ export default {
     width: 100%;
     color: white;
     font-weight: 700;
+    opacity: 0;
+    z-index: 2;
 }
 </style>
