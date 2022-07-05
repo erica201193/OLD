@@ -306,5 +306,6 @@ export default {
     font-weight: 700;
     opacity: 0;
     z-index: 2;
+    transition: opacity 0.8s;
 }
 </style>

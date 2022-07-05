@@ -15,7 +15,7 @@
                         <button class="custom-btn moreinfo-btn">+</button>
                     </div>
                     <div v-else class="d-inline">
-                        <button class="custom-btn moreinfo-btn">-</button>
+                        <button class="custom-btn moreinfo-btn lessinfo-btn">-</button>
                     </div>
 
                     <h5 class="ms-3 d-inline">
@@ -142,6 +142,9 @@ margin-bottom: 1rem;
     color: #fff;
     background-color: transparent;
     border-radius: 0;
+}
+.lessinfo-btn {
+    font-size: 25px;
 }
 </style>
 
