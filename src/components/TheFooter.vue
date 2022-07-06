@@ -115,6 +115,7 @@ export default {
 
         &:hover {
                 color:  #fff;
+                text-shadow: 0.3rem 0.5rem 1rem rgba(black, 1);
             }
     }
 }
@@ -147,7 +148,9 @@ export default {
 
 
         &:hover {
-            color:  #fff;
+            color:  white;
+            background-color: #eb4b54;
+            box-shadow: 0.3rem 0.5rem 1rem rgba(black, .5);
         }
     }
 }
