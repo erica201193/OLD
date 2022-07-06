@@ -5,7 +5,7 @@
             <div class="row align-items-center row-cols-3 photo-slider" id="slider">
                 <div class="col" v-for="(slide, i) in eventPhotos" :key="i + 1"
                     @mouseenter="selectImg(slide)"
-                    @mouseleave="selectImg(slide)">
+                    @mouseleave="deselectImg(slide)">
                     <SlideTemplate :img="slide.photo" :eventName="slide.eventName" :select="slide.select">
                     </SlideTemplate>
                 </div>
@@ -94,11 +94,13 @@ export default {
         },
 
         selectImg(slide) {
-            if (slide.select === false) {
             slide.select = true;
-            } else {
-                slide.select = false;
-            }
+            console.log(slide.select);
+        },
+
+        deselectImg(slide) {
+            slide.select = false;
+            console.log(slide.select);
         }
         
     }
