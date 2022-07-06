@@ -82,12 +82,12 @@ export default {
 
             if (direction == "next") {
                 slider.scrollBy({
-                left: 500,
+                left: 440,
                 behavior: 'smooth'
             })
             } else if (direction == "prev") {
                 slider.scrollBy({
-                    left: -500,
+                    left: -440,
                     behavior: 'smooth'
                 })
             }
@@ -113,6 +113,7 @@ export default {
 .photo-slider {
     overflow: auto;
     flex-wrap: nowrap;
+    padding: 40px 0;
 }
 
 .slider-btn {
